@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Quiz • PowerPlay Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo">PowerPlay Fitness</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="plans.html">Plans</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="book.html">Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <h1>Find Your Fitness Path</h1>
+        <p>Take our quick quiz to discover which PowerPlay Fitness plan is right for you. We’ll use your answers to send you personalised recommendations and tips. You’ll also receive a special offer if you decide to join.</p>
+        <form class="contact-form" action="https://formsubmit.co/abdulwahida340@gmail.com" method="POST">
+            <!-- Hidden fields for email subject, autoresponse and redirect -->
+            <input type="hidden" name="_subject" value="New quiz submission">
+            <input type="hidden" name="_autoresponse" value="Thanks for taking the PowerPlay Fitness Quiz! We’ve received your answers and will review them. Soon we’ll email you a personalised recommendation. In the meantime, explore our plans or book a free consultation.">
+            <input type="hidden" name="_next" value="https://abdullah072.github.io/PowerPlayFitnessX/thankyou.html">
+
+            <label for="quiz-name">Name</label>
+            <input type="text" id="quiz-name" name="name" required>
+
+            <label for="quiz-email">Email</label>
+            <input type="email" id="quiz-email" name="email" required>
+
+            <!-- Question 1 -->
+            <label for="goal">What’s your primary fitness goal?</label>
+            <select id="goal" name="goal" required>
+                <option value="Build muscle">Build muscle</option>
+                <option value="Lose fat">Lose fat</option>
+                <option value="Improve endurance">Improve endurance</option>
+                <option value="General health &amp; fitness">General health &amp; fitness</option>
+            </select>
+
+            <!-- Question 2 -->
+            <label for="experience">How experienced are you with training?</label>
+            <select id="experience" name="experience" required>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <!-- Question 3 -->
+            <label for="frequency">How many days per week can you dedicate to training?</label>
+            <select id="frequency" name="frequency" required>
+                <option value="1-2 days">1–2 days</option>
+                <option value="3-4 days">3–4 days</option>
+                <option value="5+ days">5+ days</option>
+            </select>
+
+            <!-- Question 4 -->
+            <label for="nutrition">Which best describes your nutrition approach?</label>
+            <select id="nutrition" name="nutrition" required>
+                <option value="I don’t track nutrition">I don’t track nutrition</option>
+                <option value="I try to eat healthy but need guidance">I try to eat healthy but need guidance</option>
+                <option value="I follow a structured meal plan">I follow a structured meal plan</option>
+            </select>
+
+            <!-- Question 5 -->
+            <label for="gamification">Are you interested in gamified workouts and VR experiences?</label>
+            <select id="gamification" name="gamification" required>
+                <option value="Yes, absolutely">Yes, absolutely</option>
+                <option value="Maybe, I’m curious">Maybe, I’m curious</option>
+                <option value="Not really">Not really</option>
+            </select>
+
+            <button type="submit" class="cta small">Submit Quiz</button>
+        </form>
+
+        <p style="margin-top: 2rem;">After you submit, we’ll analyse your answers and send a tailored recommendation to help you get started. For instant guidance, check out our <a href="plans.html">plans</a> or <a href="book.html">book a free consultation</a>.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PowerPlay Fitness. All rights reserved.</p>
+    </footer>
+</body>
+</html>
