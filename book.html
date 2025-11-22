@@ -1,12 +1,19 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17697074515">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17697074515');
-</script>
+<!--
+    book.html – Booking page for PowerPlay Fitness
+
+    This updated version replaces the old email booking form with a Calendly
+    scheduling widget. When visitors load this page they'll be able to book
+    a 15‑minute call directly via Calendly. You should replace the
+    `data-url` value below with your actual Calendly scheduling link. See
+    https://calendly.com for instructions on creating an event type and
+    obtaining your unique booking URL.
+
+    If you don't have a Calendly account yet, sign up using your email
+    (abdulwahida340@gmail.com) and create a 15‑minute meeting type. Then
+    update the `data-url` attribute accordingly.
+-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,26 +48,12 @@
 
     <main class="page">
         <h1>Book an Appointment</h1>
-        <p>Curious about our programs or want a free consultation? Schedule a 15‑minute call with me. Fill out the form below and you’ll receive a meeting link via email.</p>
-        <form class="contact-form" action="https://formsubmit.co/abdulwahida340@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New appointment booking">
-            <!-- _autoresponse: send meeting link to client -->
-            <input type="hidden" name="_autoresponse" value="Thanks for booking a consultation with PowerPlay Fitness! Your call has been scheduled. Please join the meeting via this link: https://meet.google.com/abc-defg-hij. We look forward to speaking with you.">
-            <input type="hidden" name="_next" value="https://abdullah072.github.io/PowerPlayFitnessX/thanksbooking.html">
-            <label for="book-name">Name</label>
-            <input type="text" id="book-name" name="name" required>
+        <p>Curious about our programs or want a free consultation? Schedule a 15‑minute call with me. Use the Calendly widget below to pick a time that works for you. You’ll receive a confirmation and meeting link automatically.</p>
 
-            <label for="book-email">Email</label>
-            <input type="email" id="book-email" name="email" required>
-
-            <label for="book-date">Preferred Date &amp; Time</label>
-            <input type="text" id="book-date" name="date" placeholder="e.g., March 10, 3pm CST" required>
-
-            <label for="book-message">Questions or Topics</label>
-            <textarea id="book-message" name="message" rows="4"></textarea>
-
-            <button type="submit" class="cta small">Book Now</button>
-        </form>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/abdulwahida340/15min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:630px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
     </main>
 
     <footer>
